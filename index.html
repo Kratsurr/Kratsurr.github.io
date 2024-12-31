@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamCast</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/info2.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <a href="#Homepage"><button id="scrollToTopBtn" class="btn" onclick="scrollToTop()">Powrót</button></a>
+    <script>
+        window.addEventListener('scroll', function() {
+        var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+    </script>
+    <div class="header" id="Homepage">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo Mlekinga" width="75px">
+                </div>
+                <div class="brand" style="margin-left: 15px;"><h1>Dream</h1><h1>Cast</h1></div>
+                <nav>
+                    <ul>
+                        <li><a href="#Produkty">Produkty</a></li>
+                        <li><a href="#Onas">O nas</a></li>
+                        <li><a href="https://www.instagram.com/kratsurr/">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="offer-container">  
+                <div class="row" >
+                    <div class="col-2">
+                        <h1><i>DREAM
+                            CAST
+                        </nav></i></h1>
+                        <p>Lub inaczej;<br>Rozmarzeni twórcy <i><b>gier, komiksów, <br>zineów...</b></i> a to jeszcze nie wszystko!</p>
+                        <a href="#Onas" class="btn">Więcej o nas</a>
+                    </div>
+                    <div class="col-cow">
+                        <img class="ads" src="images/test.png" alt="cow" class="cow">
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+
+
+    <div class="categories">
+        <div class="small-container">
+           <div class="row_listing">
+                <div class="col-3">
+                    <a href="#Produkty"><img src="images/typeoat.png" alt="" style="width:100%"></a>
+                </div>
+                <div class="col-3">
+                    <a href="#almond"><img src="images/typealmond.png" alt="" style="width:100%"></a>
+                </div>
+                <div class="col-3">
+                    <a href="#soy"><img src="images/typesoya.png" alt="" style="width:100%"></a>
+                </div>
+                <div class="col-3">
+                    <a href="#rice"><img src="images/typerice.png" alt="" style="width:100%"></a>
+                </div>
+                <div class="col-3">
+                    <a href="#coco"><img src="images/typecoconut.png" alt="" style="width:100%"></a>
+                </div>
+                <div class="col-3">
+                    <a href="#banana"><img src="images/typebanana.png" alt="" style="width:100%"></a>
+                </div> 
+            </div> 
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+      </script>
+
+    <script>
+            function toggleX1(infoId) {
+                var x1Elements = document.querySelectorAll('.x1');
+        
+                x1Elements.forEach(function(element) {
+                    element.style.display = 'none';
+                });
+
+                var selectedContainer = document.getElementById(infoId);
+                selectedContainer.style.display = 'block';
+
+                selectedContainer.scrollIntoView({ behavior: 'smooth' });
+            }
+    </script>
+
+
+    
+    <div class="small-container" id="Produkty">
+        <h2 id="small-containerh2">Co przynosimy do stołu</h2>
+        <div class="row_products" id="oat">
+            <h1>LOVBIR<br><a href="https://www.instagram.com/lovbir__/">INSTAGRAM</a><br><a href="https://lovbirmegus.bigcartel.com/?fbclid=PAZXh0bgNhZW0CMTEAAaaubIe2YyIe0T2KcfqPYT2MUUHJbbCVUYyKwir0XKyvfdiFmq1KwLueP9Q_aem_h-KJPBm6PRCqpMEyjdRtcg">SKLEP</a></h1>
+            <div class="col-4" onclick="toggleX1('oatBottle')">
+                <img src="images/oatbottle.jpg" alt="">
+                <h2>Naklejki i breloki</h2>
+                <h4>Pojedynczo oraz w zestawach</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('oatCarton')">
+                <img src="images/oatcarton.jpg"  alt="">
+                <h2>Autorski komiks</h2>
+                <h4>W trakcie produkcji</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('oatJug')" >
+                <img src="images/oatjug.jpg" alt="">
+                <h2>Plakaty</h2>
+                <h4>Do wyboru, do koloru</h4>
+            </div>
+        </div>
+
+        <div class="small-container" >
+            <div class="x1" id="oatCarton" style="display: none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/oatcarton.jpg" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Komiks "Bait"</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br><b>“Bait”</b> to mój autorski komiks, który zostanie wydany na początku 2025 roku. <br><br>Jest to jednotomowa historia o kosmicznych postaciach dryfujących w pustce.<br><br><u>Komiks będzie promowany wraz z plakatem i naklejkami na sprzedaż!</u></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="oatBottle" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/oatbottle.jpg" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Breloczki i naklejki</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Każdy fan jaskrawych i żywych kolorów na pewno musi zerknąć na moje naklejki i breloczki! Z asortymentu znajdzie się cokolwiek dla każdego, od autorskich designów aż po te nawiązujące do popkultury.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="oatJug" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/oatjug.jpg" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Printy/plakaty</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Autorskie ilustracje rysunków digitalowych w formatach głównie A4 i A5 o charakterystycznej, przyciągającą uwagę kolorystyce!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row_products" id="almond">
+            <h1>MEGUS<br><a href="https://www.instagram.com/lobster_noodlee/">INSTAGRAM</a><br><a href="https://lovbirmegus.bigcartel.com/?fbclid=PAZXh0bgNhZW0CMTEAAaaubIe2YyIe0T2KcfqPYT2MUUHJbbCVUYyKwir0XKyvfdiFmq1KwLueP9Q_aem_h-KJPBm6PRCqpMEyjdRtcg">SKLEP</a><br><a href="https://x.com/megus_artz?s=21&t=yk3xi0df0TBkornglzatQA">X</a></h1>
+            <div class="col-4" onclick="toggleX1('almondBottle')">
+                <img src="images/almondbottle.jpg"  alt="">
+                <h2>Breloki i zawieszki</h2>
+                <h4>Gadżety z akrylu</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('almondCarton')">
+                <img src="images/almondcarton.jpg" alt="">
+                <h2>Naklejki</h2>
+                <h4>Pojedynczo oraz w zestawach</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('almondJug')">
+                <img src="images/almondjug.jpg" alt="">
+                <h2>Plakaty</h2>
+                <h4>W różnorodnych wymiarach</h4>
+            </div>
+        </div>
+
+
+        <div class="small-container" >
+            <div class="x1" id="almondCarton" style="display: none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/almondcarton.jpg" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Naklejki i zestawy naklejek </h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Oferuję kolorowy wachlarz przeróżnych naklejek dużych i małych. Tematyka stickersetow i naklejek jest różna, więc każdy znajdzie coś dla siebie!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="almondBottle" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/almondbottle.jpg" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Breloczki</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Przeróżne barwne breloczki, które nie mogą doczekać się trzeszczenia i brzęczenia przy wszelkich torbach! Najczęściej tematyką breloczków są grafiki inspirowane różnymi seriami, jak i znajdzie się coś z oryginalnymi postaciami autorki Megus!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="almondJug" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/almondjug.jpg" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Plakaty</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Wydruki Megus mogą pomóc tym, którzy szukają czegoś co udekoruje ich puste ściany! Różnorodnie, kolorowo, dla każdego coś innego. Najczęściej w tematyce inspirowanej grami, seriami itp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    
+    
+    
+
+
+        <div class="row_products" id="soy">
+            <h1>KAJAMNIK<br><a href="https://www.instagram.com/kajamnikk/">INSTAGRAM</a></h1>
+            <div class="col-4" onclick="toggleX1('soyBottle')">
+                <img src="images/soyabottle.png" alt="">
+                <h2>Naklejki</h2>
+                <h4>Pojedynczo oraz w zestawach</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('soyCarton')">
+                <img src="images/soyacarton.png" alt="">
+                <h2>"Sigmy"</h2>
+                <h4>Mówi samo za siebie</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('soyJug')">
+                <img src="images/soyajug.png" alt="">
+                <h2>Plakaty</h2>
+                <h4>Idealne dla robofanatyków</h4>
+            </div>
+        </div>
+
+        <div class="small-container" >
+            <div class="x1" id="soyCarton" style="display: none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/soyacarton.png" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Sigma</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Kochamy sigmy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="soyBottle" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/soyabottle.png" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1  style="color: black;">Naklejki</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Przeróżne wzory naklejek inspirowanych grammi, serialami, jak i zarówno własnymi wolnymi interpretacjami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="soyJug" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/soyajug.png" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Plakaty</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Prace głównie inspirowane robotyką i cybernetyką, mających na celu wywołać wrażenie swoją tematyką oraz kompozycją.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+
+
+        <div class="row_products" id="rice">
+            <h1>KRATSEWER<br><a href="https://www.instagram.com/kratsurr/">INSTAGRAM</a><br><a href="https://kratsewer.bigcartel.com/?fbclid=PAZXh0bgNhZW0CMTEAAaZOFFl2tYJgY45j68G3Nm-0I8J2moxs7C9Uv67_-Hth1l4V0MEijUtFhqM_aem_Yh36G3i93PT82Ylc6mGPAg">SKLEP</a></h1>
+            <div class="col-4" onclick="toggleX1('riceBottle')">
+                <img src="images/ricebottle.png" alt="">
+                <h2>Breloki i przypinki</h2>
+                <h4>Wszelkie gadżety fantasy</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('riceCarton')">
+                <img src="images/ricecarton.png" alt="">
+                <h2>Autorska gra</h2>
+                <h4>Promocja indie projektu</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('riceJug')">
+                <img src="images/ricejug.png" alt="">
+                <h2>Plakaty</h2>
+                <h4>Inspirowane grami</h4>
+            </div>
+        </div>
+
+        <div class="small-container" >
+            <div class="x1" id="riceCarton" style="display: none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/ricecarton.png" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;"><i>Time of Death</i></h1><br>
+                        <h3>Dokładniej...</h3><br>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" >Autorski projekt pasji realizowany w formie komedyjnej Visual Novelki, w której fantastyczne poczynania owiewają Westernową tematykę mgiełką tajemnicy.<br><br>Z premierą przewidywaną na wczesny 2025, <u>gra mogłaby mieć swój komercyjny debiut właśnie na Pyrkonie!</u></p>
+                        <button type="submit" class="btnPLEASESEND" name="submitBtn"><a href="https://kratsewer.bigcartel.com/game-project">Więcej informacji dot. projektu</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="riceBottle" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/ricebottle.png" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Breloki i przypinki</h1>
+                        <h3>Dokładniej...</h3><br>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;"> Oferuję różnorodne breloki, przypinki, zawieszki itd. inspirowane autorskimi, jak i zarówno popkulturowymi seriami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="riceJug" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/ricejug.png" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Plakaty i naklejki</h1>
+                        <h3>Dokładniej...</h3><br>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" >Oferuję różnorodne plakaty i naklejki inspirowane autorskimi, jak i zarówno popkulturowymi seriami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    
+
+        <div class="row_products" id="coco">
+            <h1>MOOMFS<br><a href="https://www.instagram.com/moomfs/">INSTAGRAM</a></h1>
+            <div class="col-4" onclick="toggleX1('cocoBottle')">
+                <img src="images/cocobottle.jpg" alt="">
+                <h2>Naklejki</h2>
+                <h4>Stylistycznie rozmaite</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('cocoCarton')">
+                <img src="images/cococarton.jpg" alt="">
+                <h2>Breloki</h2>
+                <h4>Akrylowe gadżety</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('cocoJug')">
+                <img src="images/cocojug.jpg" alt="">
+                <h2>Plakaty</h2>
+                <h4>Wielowymiarowe</h4>
+            </div>
+        </div>
+
+        <div class="small-container" >
+            <div class="x1" id="cocoCarton" style="display: none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/cococarton.jpg" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Breloki</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Tworzone przeze mnie breloki zawsze mają wizualny "pop"!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="cocoBottle" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/cocobottle.jpg" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2">
+                        <h1 style="color: black;">Naklejki</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Dopasowuję swoją kreskę do obrazowanego materiału, aby jak najlepiej odwzorować jego motywy przewodnie.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="small-container">
+            <div class="x1" id="cocoJug" style="display:none;">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/cocojug.jpg" width="100%" alt="" id="product-model">
+                    </div>
+                    <div class="col-2" >
+                        <h1 style="color: black;">Plakaty</h1>
+                        <h3>Dokładniej...</h3>
+                        <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Dokładam wszelkich starań, aby moje ilustracje zawsze były eterycznie nacechowane.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+        <div class="row_products" id="banana">
+            <h1>SAEWOKHRISZ<br><a href="https://www.instagram.com/saewokhrisz/">INSTAGRAM</a><br><a href="https://www.tumblr.com/saewokhrisz">TUMBLR</a><br><a href="https://x.com/saewokhrisz">X</a></h1>
+            <div class="col-4" onclick="toggleX1('bananaBottle')">
+                <img src="images/bananabottle.png" alt="">
+                <h2>Naklejki i breloki</h2>
+                <h4>Różnorodne gadżety</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('bananaCarton')">
+                <img src="images/bananacarton.png" alt="">
+                <h2>Zine Wydruki</h2>
+                <h4>Premierowe plakaty</h4>
+            </div>
+            <div class="col-4" onclick="toggleX1('bananaJug')">
+                <img src="images/bananajug.png" alt="">
+                <h2>Plakaty</h2>
+                <h4>Agresywnie przyciągające</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="small-container" >
+        <div class="x1" id="bananaCarton" style="display: none;">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/bananacarton.png" width="100%" alt="" id="product-model">
+                </div>
+                <div class="col-2">
+                    <h1 style="color: black;">Zine wydruki</h1>
+                    <h3>Dokładniej...</h3>
+                    <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Najbardziej męcząca faza tworzenia zineów (częścią których dano mi być) w końcu dobiega końca. W związku z tym, wiele prac, które aktualnie siedzą w piwnicy znanej jako NDA w końcu dojrzą światła dziennego późną wiosną - w formie wydruków do zakupu.<br><br>Tym samym mam nadzieję, że uda mi się przywieźć pare fizycznych kopii zineów na Pyrkon!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-container">
+        <div class="x1" id="bananaBottle" style="display:none;">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/bananabottle.png" width="100%" alt="" id="product-model">
+                </div>
+                <div class="col-2">
+                    <h1 style="color: black;">Naklejki i breloki</h1>
+                    <h3>Dokładniej...</h3>
+                    <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Oferuję wiele wzorów w przeróżnych formatach, najczęściej inspirowanych wszelkimi ptakami, bądź wiralowymi memami.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-container">
+        <div class="x1" id="bananaJug" style="display:none;">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/bananajug.png" width="100%" alt="" id="product-model">
+                </div>
+                <div class="col-2">
+                    <h1 style="color: black;">Plakaty</h1>
+                    <h3>Dokładniej...</h3>
+                    <p style="margin-top: 0px; padding-top: 5px; width: auto;" ><br>Mam w ofercie przeróżne wzory plakatów, które mają na celu szokować swoją kompozycją, kolorystyką lub / i tematyką!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+          $('.mlekoForma').submit(function(e) {
+            e.preventDefault();
+            var formData = $(this).serialize();
+            $.ajax({
+              type: 'POST',
+              url: $(this).attr('action'),
+              data: formData,
+              success: function(response) {
+                console.log(response);
+              },
+              error: function(error) {
+                console.log(error);
+              }
+            });
+          });
+        });
+    </script>
+
+
+
+
+
+
+    <div class="info" id="Onas">
+        <div class="small-container">
+            <div class="infoheading">  
+            </div>
+            <div class="row_about_us">
+                <div class="col-3">
+                    <img src="images/info1.png" alt="">
+                    <h3>"Powiew świeżości"</h3>
+                    <p>Tych rzeczy nigdzie indziej nie znajdziesz!</p>
+                </div>
+                <div class="col-3">
+                    <img src="images/info2.png" alt="">
+                    <h3>Wykonane z pasją</h3>
+                    <p>Jesteśmy zażartymi fanatykami!</p>
+                </div>
+                <div class="col-3">
+                    <img src="images/info3.png" alt="">
+                    <h3>Od A do Z i&nbsp;dalej</h3>
+                    <p>Znajdzie się coś dla każdego!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer"> Zaprogramowane przez <a style="color:aquamarine" href="https://www.instagram.com/kratsurr/">kratsurr :D!</a></div>
+</body>
+</html>
